@@ -18,11 +18,11 @@ func (this *MainController) Get() {
 
 func (this *MainController) Post() {
 	vmAddr := "127.0.0.1:22"
-	beego.Info(vmAddr)
+	//beego.Info(vmAddr)
 	uname := this.Input().Get("user_name")
-	beego.Info(uname)
+	//beego.Info(uname)
 	passwd := this.Input().Get("user_pwd")
-	beego.Info(passwd)
+	//beego.Info(passwd)
 
 	if uname == beego.AppConfig.String("user") && passwd == beego.AppConfig.String("password") {
 		sh := &models.SSH{

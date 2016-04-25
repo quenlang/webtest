@@ -10,5 +10,5 @@ import (
 func init() {
 	beego.Router("/", &controllers.MainController{})
 	beego.Router("/console/login", &controllers.MainController{}, "post:Post")
-	beego.Handler("/console/sshws/:127.0.0.1:22", websocket.Handler(models.SSHWebSocketHandler))
+	beego.Handler("/console/sshws/:vm_info", websocket.Handler(models.SSHWebSocketHandler))
 }
